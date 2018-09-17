@@ -28,6 +28,6 @@ function testReturnNoteBookNotes(){
   notebook.createNote("I love Javascript")
 
   var returnedNotes = notebook.returnAllNotes();
-  assert.isTrue (returnedNotes[0]._text === "I love Javascript");
+  assert.isTrue (returnedNotes[0].returnText() === "I love Javascript");
 }
 testReturnNoteBookNotes();
