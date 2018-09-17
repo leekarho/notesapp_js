@@ -1,12 +1,31 @@
-(function(exports){
-  function testNotebookInstantiate(){
-    var notebook = new Notebook();
-
-    if (notebook.allNotes.length > 0) {
-      throw new Error("notebook is not empty")
+var assert = {
+  isTrue: function(assertionToCheck) {
+    if (!assertionToCheck) {
+      throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
     } else {
-      console.log("it worked - notebook is empty")
+      console.log("Test passed " + assertionToCheck + " is truthy");
     }
   }
-  testNotebookInstantiate();
-})(this);
+}
+
+function testNotebookInstantiate(){
+  var notebook = new Notebook();
+
+  assert.isTrue(notebook.allNotes.length === 0);
+}
+testNotebookInstantiate();
+
+function testCreateNote(){
+  var notebook = new Notebook();
+  notebook.createNote("I love Javascript")
+
+  assert.isTrue(notebook.allNotes.length ===1);
+}
+testCreateNote();
+
+// function testReturnNoteBookNotes(){
+//   var notebook = new Notebook();
+//
+//   assert.isTrue (notebook.returnAllNotes) {
+// }
+// testReturnNoteBookNotes();
