@@ -8,5 +8,9 @@
     this.allNotes.push(new this._note(text));
   }
 
+  Notebook.prototype.returnAllNotes = function() {
+    return this.allNotes;
+  }
+
   exports.Notebook = Notebook;
 })(this);

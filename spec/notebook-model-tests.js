@@ -23,9 +23,11 @@ function testCreateNote(){
 }
 testCreateNote();
 
-// function testReturnNoteBookNotes(){
-//   var notebook = new Notebook();
-//
-//   assert.isTrue (notebook.returnAllNotes) {
-// }
-// testReturnNoteBookNotes();
+function testReturnNoteBookNotes(){
+  var notebook = new Notebook();
+  notebook.createNote("I love Javascript")
+
+  var returnedNotes = notebook.returnAllNotes();
+  assert.isTrue (returnedNotes[0]._text === "I love Javascript");
+}
+testReturnNoteBookNotes();
