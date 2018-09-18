@@ -1,16 +1,16 @@
 (function(exports){
-  function Notebook(){
+  function NoteBook(){
     this.allNotes = [];
     this._note = Note
   }
 
-  Notebook.prototype.createNote = function(text){
+  NoteBook.prototype.createNote = function(text){
     this.allNotes.push(new this._note(text));
   }
 
-  Notebook.prototype.returnAllNotes = function() {
+  NoteBook.prototype.returnAllNotes = function() {
     return this.allNotes;
   }
 
-  exports.Notebook = Notebook;
+  exports.NoteBook = NoteBook;
 })(this);

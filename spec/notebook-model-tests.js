@@ -9,25 +9,25 @@ var assert = {
 }
 
 function testNotebookInstantiate(){
-  var notebook = new Notebook();
+  var noteBook = new NoteBook();
 
-  assert.isTrue(notebook.allNotes.length === 0);
+  assert.isTrue(noteBook.allNotes.length === 0);
 }
 testNotebookInstantiate();
 
 function testCreateNote(){
-  var notebook = new Notebook();
-  notebook.createNote("I love Javascript")
+  var noteBook = new NoteBook();
+  noteBook.createNote("I love Javascript")
 
-  assert.isTrue(notebook.allNotes.length ===1);
+  assert.isTrue(noteBook.allNotes.length ===1);
 }
 testCreateNote();
 
 function testReturnNoteBookNotes(){
-  var notebook = new Notebook();
-  notebook.createNote("I love Javascript")
+  var noteBook = new NoteBook();
+  noteBook.createNote("I love Javascript")
 
-  var returnedNotes = notebook.returnAllNotes();
+  var returnedNotes = noteBook.returnAllNotes();
   assert.isTrue (returnedNotes[0].returnText() === "I love Javascript");
 }
 testReturnNoteBookNotes();

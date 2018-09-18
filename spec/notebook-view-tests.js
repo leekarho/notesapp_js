@@ -9,12 +9,14 @@ var assert = {
 }
 
 function testReturnsHtml(){
-  var notebook = new Notebook();
-  notebook.createNote("I love Javascript")
-  notebook.createNote("I love Ruby")
-  var htmlString = "<li>I love Javascript</li><li>I love Ruby</li>"
-  var notebookView = new NotebookView(notebook);
 
-  assert.isTrue(notebookView.returnHtml === htmlString);
+  var noteBook = new NoteBook()
+  noteBook.createNote('test 1')
+  noteBook.createNote('test 2')
+  var noteBookView = new NoteBookView(noteBook.returnAllNotes)
+
+  assert.isTrue((noteBookView.notebook) === noteBook.returnAllNotes)
+  debugger;
+  assert.isTrue(noteBookView.returnHtml() === "<ul><li><div>test 1</div></li><li><div>test 2</div></li></ul>")
 }
 testReturnsHtml();

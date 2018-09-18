@@ -1,15 +1,15 @@
 (function(exports){
-  function NotebookView(notebook){
-    this.notebook = notebook
+  function NoteBookView(noteBook){
+    this.noteBook = noteBook
   }
 
-  NotebookView.prototype.returnHtml = function(){
-    var allNotes = this.notebook.returnAllNotes();
-    var joined = allNotes.join("</li><li>")
-    var allNotesJoined = "<li>" + joined + "</li>"
-    return allNotesJoined
+  NoteBookView.prototype.returnHtml = function(){
 
+    var noteBookArray = this.noteBook.returnAllNotes()
+    var noteArray = noteBookArray.map(note => note._text);
+    console.log(this.noteBook.returnAllNotes())
+    return "<ul><li><div>" + noteArray.join("</div></li><li><div>") + "</div></li></ul>"
   }
 
-  exports.NotebookView = NotebookView;
+  exports.NoteBookView = NoteBookView;
 })(this);
