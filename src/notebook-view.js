@@ -7,7 +7,7 @@
 
     var noteBookArray = this.noteBook.returnAllNotes()
     var noteArray = noteBookArray.map(note => note._text);
-    console.log(this.noteBook.returnAllNotes())
+
     return "<ul><li><div>" + noteArray.join("</div></li><li><div>") + "</div></li></ul>"
   }
 
