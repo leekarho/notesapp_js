@@ -10,13 +10,13 @@ var assert = {
 
 function testReturnsHtml(){
 
-  var noteBook = new NoteBook()
-  noteBook.createNote('test 1')
-  noteBook.createNote('test 2')
+  var noteBook = new NoteBook
   var noteBookView = new NoteBookView(noteBook)
+  noteBook.createNote("123456789012345678901234")
+  noteBook.createNote('test 2')
 
   assert.isTrue((noteBookView.noteBook) === noteBook)
 
-  assert.isTrue(noteBookView.returnHtml() === "<ul><li><div>test 1</div></li><li><div>test 2</div></li></ul>")
-}
+  assert.isTrue(noteBookView.returnHtml() === "<ul><li><div>12345678901234567890</div></li><li><div>test 2</div></li></ul>")
+};
 testReturnsHtml();

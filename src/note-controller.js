@@ -8,7 +8,7 @@
     this.noteBook.createNote(text);
   };
 
-  NoteController.prototype.getsHtml = function(element){
+  NoteController.prototype.getsHtml = function(element = document.getElementById("app")){
     element.innerHTML = this.view.returnHtml();
   };
 
