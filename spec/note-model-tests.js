@@ -25,3 +25,17 @@
 
   testNoteReturnsText();
 })(this);
+
+(function(exports) {
+  function testReturnUniqueID() {
+    var note = new Note ("our first note");
+
+    if (note.returnText() !== "our first note") {
+      throw new Error("Did not match text")
+    } else {
+      console.log("returnText worked");
+    }
+  }
+
+  testReturnUniqueID();
+})(this);

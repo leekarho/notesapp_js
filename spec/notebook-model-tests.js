@@ -31,3 +31,8 @@ function testReturnNoteBookNotes(){
   assert.isTrue (returnedNotes[0].returnText() === "I love Javascript");
 }
 testReturnNoteBookNotes();
+
+function testUniqueID(){
+
+}
+testUniqueID();
