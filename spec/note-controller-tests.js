@@ -10,9 +10,9 @@ var assert = {
 
 function NoteBookDouble(){}
 
-NoteBookDouble.prototype = {
-  createNote: function(){}
-};
+// NoteBookDouble.prototype = {
+//   createNote: function(){}
+// };
 
 function NoteBookViewDouble(){}
 
