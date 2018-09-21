@@ -28,13 +28,11 @@
 
 (function(exports) {
   function testReturnUniqueID() {
-    var note = new Note ("our first note");
+    var note = new Note("our first note");
+    var note2 = new Note("our second note");
 
-    if (note.returnText() !== "our first note") {
-      throw new Error("Did not match text")
-    } else {
-      console.log("returnText worked");
-    }
+    assert.isTrue(note._id !== note2._id)
+
   }
 
   testReturnUniqueID();
