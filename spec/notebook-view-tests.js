@@ -16,7 +16,7 @@ function testReturnsHtml(){
   noteBook.createNote('test 2')
 
   assert.isTrue((noteBookView.noteBook) === noteBook)
-
-  assert.isTrue(noteBookView.returnHtml() === "<ul><li><div>12345678901234567890</div></li><li><div>test 2</div></li></ul>")
+  
+  assert.isTrue(noteBookView.returnHtml() === '<ul><li><div><a href="#notes/2">12345678901234567890</a></div></li><li><div><a href="#notes/3">test 2</a></div></li></ul>')
 };
 testReturnsHtml();
